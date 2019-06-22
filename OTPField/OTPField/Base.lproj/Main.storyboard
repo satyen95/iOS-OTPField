@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OTPField" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhP-6D-gq9">
+                                <rect key="frame" x="87" y="428" width="240" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SYB-hj-fBA"/>
+                                    <constraint firstAttribute="width" constant="240" id="fgx-Kw-Eyt"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFc-2t-oHs">
+                                <rect key="frame" x="117" y="508" width="180" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72939680232558135" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Kh0-7O-1dF"/>
+                                    <constraint firstAttribute="height" constant="30" id="sgr-ei-5Yo"/>
+                                </constraints>
+                                <state key="normal" title="CLICK TO HIGHLIGHT">
+                                    <color key="titleColor" red="1" green="0.39248802449999998" blue="0.41950628379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedForHighlight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5k-KO-t8H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.043246261199999997" blue="0.22694705309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="nhP-6D-gq9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="djc-P3-KNb"/>
+                            <constraint firstItem="DFc-2t-oHs" firstAttribute="top" secondItem="nhP-6D-gq9" secondAttribute="bottom" constant="40" id="tth-GK-blK"/>
+                            <constraint firstItem="DFc-2t-oHs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v3D-wK-Yt8"/>
+                            <constraint firstItem="nhP-6D-gq9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xcx-th-U6Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="otpContainerView" destination="nhP-6D-gq9" id="WzD-8Q-CLm"/>
+                        <outlet property="testButton" destination="DFc-2t-oHs" id="3sn-bm-ond"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
