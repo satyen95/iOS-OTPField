@@ -11,8 +11,8 @@ import UIKit
 
 class OTPTextField: UITextField {
     
-    var previousTextField: OTPTextField?
-    var nextTextField: OTPTextField?
+    weak var previousTextField: OTPTextField?
+    weak var nextTextField: OTPTextField?
     
     override public func deleteBackward(){
         if text == "" {

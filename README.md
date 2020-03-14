@@ -6,3 +6,5 @@ clone/download and run, its that simple.
 
 For documtentation and approach please refer:
 https://medium.com/@satyenmaurya95/creating-an-otp-screen-with-swift-5-4-2-633718a970d5
+
+![](OTPField-demo.gif)
