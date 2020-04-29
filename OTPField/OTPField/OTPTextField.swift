@@ -15,9 +15,8 @@ class OTPTextField: UITextField {
     weak var nextTextField: OTPTextField?
     
     override public func deleteBackward(){
-        if text == "" {
-            previousTextField?.becomeFirstResponder()
-        }
+        text = ""
+        previousTextField?.becomeFirstResponder()
     }
     
 }

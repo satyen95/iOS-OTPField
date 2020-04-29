@@ -79,7 +79,7 @@ class OTPStackView: UIStackView {
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 2
         textField.layer.borderColor = inactiveFieldBorderColor.cgColor
-        textField.keyboardType = .numberPad
+        textField.keyboardType = .default
         textField.autocorrectionType = .yes
         textField.textContentType = .oneTimeCode
     }
@@ -122,6 +122,7 @@ class OTPStackView: UIStackView {
                 break
             }
         }
+        checkForValidity()
         remainingStrStack = []
     }
     
@@ -139,6 +140,7 @@ extension OTPStackView: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        checkForValidity()
         textField.layer.borderColor = inactiveFieldBorderColor.cgColor
     }
     
@@ -153,18 +155,12 @@ extension OTPStackView: UITextFieldDelegate {
         } else {
             if (range.length == 0){
                 if textField.nextTextField == nil {
+                    textField.text? = string
                     textField.resignFirstResponder()
                 }else{
+                    textField.text? = string
                     textField.nextTextField?.becomeFirstResponder()
                 }
-                textField.text? = string
-                checkForValidity()
-                return false
-            }
-            else if (range.length == 1) {
-                textField.previousTextField?.becomeFirstResponder()
-                textField.text? = ""
-                checkForValidity()
                 return false
             }
             return true
