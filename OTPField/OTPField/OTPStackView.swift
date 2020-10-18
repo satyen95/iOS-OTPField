@@ -153,7 +153,9 @@ extension OTPStackView: UITextFieldDelegate {
             autoFillTextField(with: string)
             return false
         } else {
-            if (range.length == 0){
+            if (range.length == 0 && string == "") {
+                return false
+            } else if (range.length == 0){
                 if textField.nextTextField == nil {
                     textField.text? = string
                     textField.resignFirstResponder()
