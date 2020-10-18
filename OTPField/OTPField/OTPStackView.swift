@@ -87,7 +87,7 @@ class OTPStackView: UIStackView {
     //checks if all the OTPfields are filled
     private final func checkForValidity(){
         for fields in textFieldsCollection{
-            if (fields.text == ""){
+            if (fields.text?.trimmingCharacters(in: CharacterSet.whitespaces) == ""){
                 delegate?.didChangeValidity(isValid: false)
                 return
             }
