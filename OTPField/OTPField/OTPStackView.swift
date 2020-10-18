@@ -31,6 +31,8 @@ class OTPStackView: UIStackView {
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
+        setupStackView()
+        addOTPFields()
     }
     
     override init(frame: CGRect) {
